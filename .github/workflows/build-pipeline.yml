@@ -131,7 +131,7 @@ jobs:
         run: |
             artifact_file_name="${{ env.pyproject_name }}-${{ env.software_version }}.zip"
             echo "ARTIFACT_FILE=$artifact_file_name" >> $GITHUB_ENV
-            cp artifact-${{ env.software_version }}.zip $artifact_file_name
+            cp ${{ env.pyproject_name }}-${{ env.software_version }}.zip $artifact_file_name
 
       - name: Create PreRelease
         id: create_prerelease
