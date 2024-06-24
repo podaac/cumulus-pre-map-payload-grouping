@@ -5,5 +5,5 @@ cd package ; zip -r ../artifact.zip . -x '*.pyc'
 cd ..
 code_version=`poetry version | awk '{print $2}'`
 code_name=`poetry version | awk '{print $1}'`
-cp artifact.zip $code_name-$code_version.zip
-echo \*\* $code_name-$code_version.zip created \*\*
+cp artifact.zip artifact-$code_version.zip
+echo \*\* artifact-$code_version.zip created \*\*
