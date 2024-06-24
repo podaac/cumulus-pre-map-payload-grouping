@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "cumulus-pre-map-payload-grouping"
+version = "0.1.0"
+description = "A simple lambda where it prepares CMR messages for step function MAP"
+authors = ["Hong-Kit Randy Yeung <hong-kit.r.yeung@jpl.nasa.gov>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+cumulus-process = "^1.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.3.1"
+moto = "^4.1.14"
+pytest-cov = "^4.0.0"
+pylint = "^2.17.4"
+flake8 = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
