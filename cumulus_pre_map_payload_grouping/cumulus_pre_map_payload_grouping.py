@@ -9,6 +9,7 @@ from cumulus_process import Process
 
 logger = CumulusLogger('cumulus_pre_map_payload_grouping')
 
+
 class SplitAndGroupPayloadGranules(Process):
     """
     The main class which `process` is overloaded via cumulus_process;
