@@ -9,10 +9,6 @@ from cumulus_process import Process
 
 logger = CumulusLogger('cumulus_pre_map_payload_grouping')
 
-# TODO: Add in sig event logging for this lambda
-
-# 3 granules for 100 concurency = 300 messages at once
-
 class SplitAndGroupPayloadGranules(Process):
     """
     The main class which `process` is overloaded via cumulus_process;
@@ -62,8 +58,6 @@ class SplitAndGroupPayloadGranules(Process):
                     }
                 }
             })
-
-        # TODO: Sig event summary for how the list of granules were broken up
 
         return cma_groups
 
