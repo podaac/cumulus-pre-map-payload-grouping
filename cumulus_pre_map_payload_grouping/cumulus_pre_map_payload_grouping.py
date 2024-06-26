@@ -9,6 +9,9 @@ from cumulus_process import Process
 
 logger = CumulusLogger('cumulus_pre_map_payload_grouping')
 
+# TODO: Add in sig event logging for this lambda
+
+# 3 granules for 100 concurency = 300 messages at once
 
 class SplitAndGroupPayloadGranules(Process):
     """
@@ -25,7 +28,7 @@ class SplitAndGroupPayloadGranules(Process):
         cumulus_meta = self.config.get('cumulus_meta')
         meta = self.config.get('meta')
 
-        granules_per_group = os.environ.get('granules_per_group', 5)
+        granules_per_group = os.environ.get('granules_per_group', 3)
 
         if 'granules' not in self.input.keys():
             raise KeyError('"granules" is missing from self.input')
@@ -38,16 +41,31 @@ class SplitAndGroupPayloadGranules(Process):
         for i in range(0, len(self.input.get('granules')), int(granules_per_group)):
             grouped_inputs.append(self.input.get('granules')[i:i + int(granules_per_group)])
 
-        cnm_groups = []
+        cma_groups = []
         for grouped_input in grouped_inputs:
-            cnm_groups.append({
-                "cumulus_meta": cumulus_meta,
-                "meta": meta,
-                "granules": grouped_input,
-                "exception": None
+            cma_groups.append({
+                "cma": {
+                    "task_config": {
+                        "provider": "{$.meta.provider}",
+                        "provider_path": "{$.meta.collection.meta.provider_path}",
+                        "collection": "{$.meta.collection}",
+                        "cumulus_meta": "{$.cumulus_meta}",
+                        "cumulus_message": ""
+                    },
+                    "event": {
+                        "cumulus_meta": cumulus_meta,
+                        "meta": meta,
+                        "payload": {
+                            "granules": grouped_input
+                        },
+                        "exception": None
+                    }
+                }
             })
 
-        return cnm_groups
+        # TODO: Sig event summary for how the list of granules were broken up
+
+        return cma_groups
 
 
 def lambda_handler(event, context):

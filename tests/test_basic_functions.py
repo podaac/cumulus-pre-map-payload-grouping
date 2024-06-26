@@ -122,97 +122,110 @@ lambda_output = {
     },
     "payload": [
         {
-            "cumulus_meta": {
-                "cumulus_meta_dummy_key": "dummy_value"
-            },
-            "meta": {
-                "collection": {
-                    "name": "dummy_collection_name"
+            "cma": {
+                "task_config": {
+                    "provider": "{$.meta.provider}",
+                    "provider_path": "{$.meta.collection.meta.provider_path}",
+                    "collection": "{$.meta.collection}",
+                    "cumulus_meta": "{$.cumulus_meta}",
+                    "cumulus_message": ""
+                },
+                "event": {
+                    "cumulus_meta": {
+                        "cumulus_meta_dummy_key": "dummy_value"
+                    },
+                    "meta": {
+                        "collection": {
+                            "name": "dummy_collection_name"
+                        }
+                    },
+                    "payload": {
+                        "granules": [
+                            {
+                                "granuleId": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1024000,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1617920,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1034240,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 112640,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 2109440,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "exception": None
                 }
-            },
-            "granules": [
-                {
-                    "granuleId": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1024000,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
-                },
-                {
-                    "granuleId": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1617920,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
-                },
-                {
-                    "granuleId": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1034240,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
-                },
-                {
-                    "granuleId": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 112640,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
-                },
-                {
-                    "granuleId": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
-                            "path": "S6A",
-                            "size": 2109440,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
-                }
-            ],
-            "exception": None
+            }
         }
     ],
     "task_config": {
@@ -233,123 +246,162 @@ lambda_output_2 = {
     },
     "payload": [
         {
-            "cumulus_meta": {
-                "cumulus_meta_dummy_key": "dummy_value"
-            },
-            "meta": {
-                "collection": {
-                    "name": "dummy_collection_name"
-                }
-            },
-            "granules": [
-                {
-                    "granuleId": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1024000,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
+            "cma": {
+                "task_config": {
+                    "provider": "{$.meta.provider}",
+                    "provider_path": "{$.meta.collection.meta.provider_path}",
+                    "collection": "{$.meta.collection}",
+                    "cumulus_meta": "{$.cumulus_meta}",
+                    "cumulus_message": ""
                 },
-                {
-                    "granuleId": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1617920,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
+                "event": {
+                    "cumulus_meta": {
+                        "cumulus_meta_dummy_key": "dummy_value"
+                    },
+                    "meta": {
+                        "collection": {
+                            "name": "dummy_collection_name"
                         }
-                    ]
+                    },
+                    "payload": {
+                        "granules": [
+                            {
+                                "granuleId": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_AX____POE__AX_20230524T215923_20230526T015923_20230614T150335__________________SALP_OPE_NT_002.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1024000,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_DO_0__DOP_____20201203T103532_20201203T123115_20201203T123145_6943_002_047_024_EUM__OPE_NR____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1617920,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "exception": None
                 }
-            ],
-            "exception": None
+            }
         },
         {
-            "cumulus_meta": {
-                "cumulus_meta_dummy_key": "dummy_value"
-            },
-            "meta": {
-                "collection": {
-                    "name": "dummy_collection_name"
-                }
-            },
-            "granules": [
-                {
-                    "granuleId": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 1034240,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
-                        }
-                    ]
+            "cma": {
+                "task_config": {
+                    "provider": "{$.meta.provider}",
+                    "provider_path": "{$.meta.collection.meta.provider_path}",
+                    "collection": "{$.meta.collection}",
+                    "cumulus_meta": "{$.cumulus_meta}",
+                    "cumulus_message": ""
                 },
-                {
-                    "granuleId": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
-                            "path": "S6A",
-                            "size": 112640,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
+                "event": {
+                    "cumulus_meta": {
+                        "cumulus_meta_dummy_key": "dummy_value"
+                    },
+                    "meta": {
+                        "collection": {
+                            "name": "dummy_collection_name"
                         }
-                    ]
+                    },
+                    "payload": {
+                        "granules": [
+                            {
+                                "granuleId": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_GN_1B_RNXH_AX_20230614T125942_20230614T135941_20230614T153905__________________CPOD_OPE_NR____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 1034240,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            },
+                            {
+                                "granuleId": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_MW_0__AMR_____20201203T050820_20201203T050936_20201203T104056_0076_002_041_021_EUM__OPE_ND____.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 112640,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "exception": None
                 }
-            ],
-            "exception": None
+            }
         },
         {
-            "cumulus_meta": {
-                "cumulus_meta_dummy_key": "dummy_value"
-            },
-            "meta": {
-                "collection": {
-                    "name": "dummy_collection_name"
-                }
-            },
-            "granules": [
-                {
-                    "granuleId": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
-                    "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
-                    "version": "0.1",
-                    "files": [
-                        {
-                            "name": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
-                            "path": "S6A",
-                            "size": 2109440,
-                            "time": 1717620499438,
-                            "url_path": "{cmrMetadata.CollectionReference.ShortName}",
-                            "bucket": "hryeung-ia-podaac-protected",
-                            "type": "data"
+            "cma": {
+                "task_config": {
+                    "provider": "{$.meta.provider}",
+                    "provider_path": "{$.meta.collection.meta.provider_path}",
+                    "collection": "{$.meta.collection}",
+                    "cumulus_meta": "{$.cumulus_meta}",
+                    "cumulus_message": ""
+                },
+                "event": {
+                    "cumulus_meta": {
+                        "cumulus_meta_dummy_key": "dummy_value"
+                    },
+                    "meta": {
+                        "collection": {
+                            "name": "dummy_collection_name"
                         }
-                    ]
+                    },
+                    "payload": {
+                        "granules": [
+                            {
+                                "granuleId": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
+                                "dataType": "MASTER_S6_CLOUD_COLLECTIONS",
+                                "version": "0.1",
+                                "files": [
+                                    {
+                                        "name": "S6A_MW_2__AMR_____20211030T235312_20211031T004925_20230216T203131_3373_036_008_004_EUM__REP_NT_F08.SEN6.tar",
+                                        "path": "S6A",
+                                        "size": 2109440,
+                                        "time": 1717620499438,
+                                        "url_path": "{cmrMetadata.CollectionReference.ShortName}",
+                                        "bucket": "hryeung-ia-podaac-protected",
+                                        "type": "data"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "exception": None
                 }
-            ],
-            "exception": None
+            }
         }
     ],
     "task_config": {
@@ -614,11 +666,9 @@ def test_input_with_replace():
     except Exception as e:
         print(e)
 
-    print(f'Response: {response}')
-
     assert len(response['payload']) is 2
-    assert len(response['payload'][0]['granules']) is 5
-    assert len(response['payload'][1]['granules']) is 2
-    assert 'cumulus_meta' in response['payload'][0]
-    assert 'meta' in response['payload'][0]
+    assert len(response['payload'][0]['cma']['event']['payload']['granules']) is 5
+    assert len(response['payload'][1]['cma']['event']['payload']['granules']) is 2
+    assert 'cumulus_meta' in response['payload'][0]['cma']['event']
+    assert 'meta' in response['payload'][0]['cma']['event']
 
