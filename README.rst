@@ -4,7 +4,7 @@ cumulus-pre-map-payload-grouping
 This is the python code for the lambda `cumulus-pre-map-payload-grouping`.
 It takes in a list of payload[Granules] and splits them into sub-groups with correct prefixes to be used with `AWS Step Function Maps <https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-map-state.html>`
 
-Required input
+Required Input
 ====
 This function is intended to be used as a cumulus task and this requires ``cumulus_meta`` and ``meta`` inputs from the ``task_config``
 ::
@@ -32,7 +32,7 @@ This command creates the ``dist/`` folder::
 
     poetry build
 
-This command downloads the dependency files from the just created .whl file, along with the lambda_handler function in ``cumulus_publish_cnm/cumulus_publish_cnm.py``, and places them in the ``package`` folder::
+This command downloads the dependency files from the just created .whl file, along with the lambda_handler function in ``cumulus_pre_map_payload_grouping/cumulus_pre_map_payload_grouping.py``, and places them in the ``package`` folder::
 
     poetry run pip install --upgrade -t package dist/*.whl
 
@@ -42,9 +42,9 @@ The last command used is::
 
     cd package ; zip -r ../artifact.zip . -x '*.pyc'
 
-Which zips and creates the ``cumulus-pre-map-payload-grouping.zip`` file, containing all files found in ``package/`` excluding .pyc files
+Which zips and creates the ``artifact.zip`` file, containing all files found in ``package/`` excluding .pyc files
 
-Then upload ``cumulus-pre-map-payload-grouping.zip`` to any location you plan to use it
+Then upload ``artifact.zip`` to any location you plan to use it
 
 * Upload directly as a lambda with ``aws lambda update-function-code``
 * Upload to your AWS S3 ``lambdas/`` folder so that your Cumulus Terraform Build can use it
