@@ -110,7 +110,7 @@ jobs:
         run: |
                 git config --global user.name 'podaac-cloud-IandA'
                 git config --global user.email 'podaac-cloud-IandA@jpl.nasa.gov'
-                git commit -am "/version ${{ env.software_version }}"
+                git diff --exit-code || git commit -am "/version ${{ env.software_version }}"
                 git push
 
       - name: Push Tag
