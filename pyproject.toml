@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cumulus-pre-map-payload-grouping"
-version = "1.0.0"
+version = "1.0.1a0"
 description = "A simple lambda where it prepares CMR messages for step function MAP"
 authors = ["Hong-Kit Randy Yeung <hong-kit.r.yeung@jpl.nasa.gov>"]
 readme = "README.rst"
